@@ -3,6 +3,7 @@
     "version": 2,
     "projects": {
         "expense-service": "apps/expense-service",
-        "expense-tracker-client": "apps/expense-tracker-client"
+        "expense-tracker-client": "apps/expense-tracker-client",
+        "types": "libs/types"
     }
 }

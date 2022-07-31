@@ -1,13 +1,12 @@
 import supertest from 'supertest'
 import { app } from './main'
 
-describe('/spendings', () => {
-    test('It should response the GET method', (done) => {
-        supertest(app)
-            .get('/spendings')
-            .then((response) => {
-                expect(response.statusCode).toBe(200)
-                done()
-            })
+import { expenseSchema } from '@pol/types'
+
+describe('/api/expenses', () => {
+    test('should respond to GET requests with a valid list of expenses', async () => {
+        const getExpensesResponse = await supertest(app).get('/api/expenses')
+        expect(getExpensesResponse.statusCode).toBe(200)
+        expect(() => getExpensesResponse.body.map(expenseSchema.parse)).not.toThrow()
     })
 })

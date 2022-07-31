@@ -10,7 +10,7 @@ export default function SpendingList({ spendings, setSpendings }) {
 
     useEffect(() => {
         setLoading(true)
-        fetch(`http://localhost:3333/spendings`, {
+        fetch(`http://localhost:3333/api/expenses`, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
         })

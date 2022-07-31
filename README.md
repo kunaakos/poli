@@ -6,13 +6,19 @@ Please use node version `v16.16.0`.
 
 ## Development server
 
-Run `nx serve my-app` for a dev server.
+### Entire project
 
-Run `nx build my-app` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `nx run-many --target=serve --projects=expense-service,expense-tracker-client` to run the project in dev mode.
+
+### Single app/lib
+
+Run `nx serve [app name]` to run a dev server for any app/lib in the project.
+
+Run `nx build [app name]` to build any app/lib in te project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
-Run `nx test my-app` to execute the unit tests via [Jest](https://jestjs.io).
+Run `nx test [app name]` to execute the unit tests via [Jest](https://jestjs.io).
 
 Run `nx affected:test` to execute the unit tests affected by a change.
 

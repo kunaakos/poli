@@ -1,0 +1,74 @@
+{
+    "$schema": "../../node_modules/nx/schemas/project-schema.json",
+    "sourceRoot": "apps/expense-tracker-client/src",
+    "projectType": "application",
+    "targets": {
+        "build": {
+            "executor": "@nrwl/web:webpack",
+            "outputs": ["{options.outputPath}"],
+            "defaultConfiguration": "production",
+            "options": {
+                "compiler": "babel",
+                "outputPath": "dist/apps/expense-tracker-client",
+                "index": "apps/expense-tracker-client/src/assets/index.html",
+                "baseHref": "/",
+                "main": "apps/expense-tracker-client/src/main.tsx",
+                "polyfills": "apps/expense-tracker-client/src/polyfills.ts",
+                "tsConfig": "apps/expense-tracker-client/tsconfig.app.json",
+                "assets": ["apps/expense-tracker-client/src/assets/favicon.ico"],
+                "styles": [],
+                "scripts": [],
+                "webpackConfig": "@nrwl/react/plugins/webpack"
+            },
+            "configurations": {
+                "development": {
+                    "extractLicenses": false,
+                    "optimization": false,
+                    "sourceMap": true,
+                    "vendorChunk": true
+                },
+                "production": {
+                    "optimization": true,
+                    "outputHashing": "all",
+                    "sourceMap": false,
+                    "namedChunks": false,
+                    "extractLicenses": true,
+                    "vendorChunk": false
+                }
+            }
+        },
+        "serve": {
+            "executor": "@nrwl/web:dev-server",
+            "defaultConfiguration": "development",
+            "options": {
+                "buildTarget": "expense-tracker-client:build",
+                "hmr": true
+            },
+            "configurations": {
+                "development": {
+                    "buildTarget": "expense-tracker-client:build:development"
+                },
+                "production": {
+                    "buildTarget": "expense-tracker-client:build:production",
+                    "hmr": false
+                }
+            }
+        },
+        "lint": {
+            "executor": "@nrwl/linter:eslint",
+            "outputs": ["{options.outputFile}"],
+            "options": {
+                "lintFilePatterns": ["apps/expense-tracker-client/**/*.{ts,tsx,js,jsx}"]
+            }
+        },
+        "test": {
+            "executor": "@nrwl/jest:jest",
+            "outputs": ["coverage/apps/expense-tracker-client"],
+            "options": {
+                "jestConfig": "apps/expense-tracker-client/jest.config.ts",
+                "passWithNoTests": true
+            }
+        }
+    },
+    "tags": []
+}

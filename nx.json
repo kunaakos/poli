@@ -24,5 +24,21 @@
             "dependsOn": ["^build"]
         }
     },
-    "defaultProject": "expense-service"
+    "defaultProject": "expense-tracker-client",
+    "generators": {
+        "@nrwl/react": {
+            "application": {
+                "style": "styled-components",
+                "linter": "eslint",
+                "babel": true
+            },
+            "component": {
+                "style": "styled-components"
+            },
+            "library": {
+                "style": "styled-components",
+                "linter": "eslint"
+            }
+        }
+    }
 }

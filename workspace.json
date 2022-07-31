@@ -2,6 +2,7 @@
     "$schema": "./node_modules/nx/schemas/workspace-schema.json",
     "version": 2,
     "projects": {
-        "expense-service": "apps/expense-service"
+        "expense-service": "apps/expense-service",
+        "expense-tracker-client": "apps/expense-tracker-client"
     }
 }

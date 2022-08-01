@@ -39,3 +39,7 @@ Visit the [Nx Documentation](https://nx.dev) to learn more.
 Things that weren't, but should've been done:
 
 -   adding a pre-commit hook that checks file formatting and runs the linter on changed files
+-   refactor all the styles and make use of styled-components theming instead of css vars
+-   refactor for static and runtime type safety, start with event handlers and data received from servers
+-   implement currencies properly, say using a library like `dinero.js` - this would eventually allow for sorting
+-   proper handling of dates/times - e.g. expenses should be stored with timestamps, not ISO dates

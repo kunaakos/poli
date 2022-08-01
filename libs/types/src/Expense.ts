@@ -1,12 +1,12 @@
 import { z } from 'zod'
-import { CurrencyAcronym, currencyAcronymSchema, Iso8601DateString, iso8601DateStringSchema } from './misc'
+import { CurrencyCode, currencyCodeSchema, Iso8601DateString, iso8601DateStringSchema } from './misc'
 
 export type Expense = {
     id: string
     description: string
     amount: number
     spent_at: Iso8601DateString
-    currency: CurrencyAcronym
+    currency: CurrencyCode
 }
 
 export const expenseSchema = z.object({
@@ -14,5 +14,5 @@ export const expenseSchema = z.object({
     description: z.string(),
     amount: z.number(),
     spent_at: iso8601DateStringSchema,
-    currency: currencyAcronymSchema,
+    currency: currencyCodeSchema,
 })

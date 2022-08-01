@@ -17,7 +17,8 @@
         "strict": true,
         "esModuleInterop": true,
         "paths": {
-            "@pol/types": ["libs/types/src/index.ts"]
+            "@pol/types": ["libs/types/src/index.ts"],
+            "@pol/ui": ["libs/ui/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

@@ -4,6 +4,7 @@
     "projects": {
         "expense-service": "apps/expense-service",
         "expense-tracker-client": "apps/expense-tracker-client",
-        "types": "libs/types"
+        "types": "libs/types",
+        "ui": "libs/ui"
     }
 }

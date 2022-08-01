@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const SelectStyles = styled.select`
+export const Select = styled.select`
     appearance: none;
     border: none;
     margin: 0;

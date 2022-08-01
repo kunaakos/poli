@@ -6,5 +6,5 @@ const iso8601DateStringRegex =
 export const iso8601DateStringSchema = z.string().regex(iso8601DateStringRegex)
 export type Iso8601DateString = string
 
-export const currencyAcronymSchema = z.enum(['USD', 'HUF'])
-export type CurrencyAcronym = z.infer<typeof currencyAcronymSchema>
+export const currencyCodeSchema = z.enum(['USD', 'HUF'])
+export type CurrencyCode = z.infer<typeof currencyCodeSchema>

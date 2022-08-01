@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const InputStyles = styled.input`
+export const Input = styled.input`
     font-family: var(--font-family);
     border: none;
     padding: 10px 15px;

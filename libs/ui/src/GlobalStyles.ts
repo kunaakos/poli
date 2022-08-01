@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
   *,
   *::before,
   *::after {
@@ -37,5 +37,3 @@ const GlobalStyle = createGlobalStyle`
     }
   }
 `
-
-export default GlobalStyle

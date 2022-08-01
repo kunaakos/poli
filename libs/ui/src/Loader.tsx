@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const LoaderOverlay = styled.div`
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -9,6 +9,7 @@ const LoaderOverlay = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
 `
 
 const LdsDualRing = styled.div`

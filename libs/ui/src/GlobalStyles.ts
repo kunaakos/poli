@@ -15,7 +15,7 @@ export const GlobalStyles = createGlobalStyle`
     min-height: 100%;
   }
 
-  :root {
+  body {
     --color-background: #F2F1F6;
     --color-white: #fff;
     --color-black: #2e2e2e;
